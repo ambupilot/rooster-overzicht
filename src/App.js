@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Table from "./components/Table";
+import dayjs from "dayjs";
+import isoWeek from "dayjs/plugin/isoWeek";
+
+dayjs.extend(isoWeek); // Gebruik ISO-weken
 
 const API_BASE_URL = "/.netlify/functions/server";
 
