@@ -18,15 +18,18 @@ const App = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(`${API_BASE_URL}`);
+        if (!response.ok) {
+          throw new Error(`Server error: ${response.status}`);
+        }
         const result = await response.json();
-        // Zorg dat de data een array is
+        console.log("Data ontvangen van de API:", result); // Debugging
         setData(Array.isArray(result) ? result : []);
       } catch (error) {
         console.error("Fout bij ophalen van data:", error);
         setNotification({ message: "Fout bij ophalen van data", type: "error" });
       }
     };
-
+  
     fetchData();
   }, []);
 
@@ -47,27 +50,32 @@ const App = () => {
     );
   };
 
-  const handleSave = async () => {
-    try {
-      const response = await fetch(`${API_BASE_URL}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+const handleSave = async () => {
+  try {
+    const response = await fetch(`${API_BASE_URL}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
 
-      const result = await response.json();
-      if (result.success) {
-        setNotification({ message: "Gegevens succesvol opgeslagen!", type: "success" });
-      } else {
-        setNotification({ message: "Opslaan mislukt.", type: "error" });
-      }
-    } catch (err) {
-      console.error("Fout bij opslaan van data:", err);
-      setNotification({ message: "Opslaan mislukt.", type: "error" });
+    if (!response.ok) {
+      throw new Error(`Server error: ${response.status}`);
     }
 
-    setTimeout(() => setNotification({ message: "", type: "" }), 3000);
-  };
+    const result = await response.json();
+    console.log("Opslagresultaat:", result); // Debugging
+    if (result.success) {
+      setNotification({ message: "Gegevens succesvol opgeslagen!", type: "success" });
+    } else {
+      setNotification({ message: "Opslaan mislukt.", type: "error" });
+    }
+  } catch (err) {
+    console.error("Fout bij opslaan van data:", err);
+    setNotification({ message: "Opslaan mislukt.", type: "error" });
+  }
+
+  setTimeout(() => setNotification({ message: "", type: "" }), 3000);
+};
 
   const downloadOverview = () => {
     const days = ["Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"];
