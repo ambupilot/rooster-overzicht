@@ -7,6 +7,7 @@ const App = () => {
   const [data, setData] = useState([]);
   const [week, setWeek] = useState(51);
   const [isEditable, setIsEditable] = useState(false);
+  const [notification, setNotification] = useState({ message: "", type: "" });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,11 +37,13 @@ const App = () => {
   const handleSave = async () => {
     try {
       await saveData(data);
-      alert("Gegevens succesvol opgeslagen!");
+      setNotification({ message: "Gegevens succesvol opgeslagen!", type: "success" });
     } catch (err) {
       console.error("Fout bij opslaan van data:", err);
-      alert("Opslaan mislukt.");
+      setNotification({ message: "Opslaan mislukt.", type: "error" });
     }
+
+    setTimeout(() => setNotification({ message: "", type: "" }), 3000);
   };
 
   return (
@@ -89,6 +92,16 @@ const App = () => {
       </div>
 
       <Overview data={weekData} />
+
+      {notification.message && (
+        <div
+          className={`p-4 mt-4 text-white rounded ${
+            notification.type === "success" ? "bg-green-300" : "bg-red-300"
+          }`}
+        >
+          {notification.message}
+        </div>
+      )}
     </div>
   );
 };
