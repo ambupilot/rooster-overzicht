@@ -1,7 +1,8 @@
 const { readFileSync, writeFileSync } = require("fs");
 const path = require("path");
 
-const dataFilePath = path.join(process.cwd(), "../../store-data.json");
+//const dataFilePath = path.join(process.cwd(), "../../store-data.json");
+const dataFilePath = path.resolve(__dirname, "../../store-data.json");
 
 exports.handler = async (event) => {
   try {
