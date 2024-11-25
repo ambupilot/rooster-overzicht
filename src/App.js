@@ -19,17 +19,23 @@ const App = () => {
       try {
         const response = await fetch(`${API_BASE_URL}`);
         const result = await response.json();
-        setData(result);
+        // Zorg dat de data een array is
+        setData(Array.isArray(result) ? result : []);
       } catch (error) {
         console.error("Fout bij ophalen van data:", error);
+        setNotification({ message: "Fout bij ophalen van data", type: "error" });
       }
     };
 
     fetchData();
   }, []);
 
-  const weekData = data.filter((item) => item.startKalenderWeek === week);
-  const availableWeeks = [...new Set(data.map((item) => item.startKalenderWeek))];
+  const weekData = Array.isArray(data)
+    ? data.filter((item) => item.startKalenderWeek === week)
+    : [];
+  const availableWeeks = Array.isArray(data)
+    ? [...new Set(data.map((item) => item.startKalenderWeek))]
+    : [];
 
   const handleChange = (dagVanDeWeek, key, value) => {
     setData((prevData) =>
@@ -74,21 +80,20 @@ const App = () => {
     );
 
     const header = `
-    ============================================
-                     Kalenderweek: ${week}
-    ============================================
+============================================
+      Beschikbaarheid M. Kerssing
+      Kalenderweek: ${week}
+============================================
     `;
 
-    const tableHeader = `| Dag       | Datum       | Dienst  | Opmerking  | Beschikbaarheid |`;
-    const divider = `+-----------+-------------+---------+------------+------------------+`;
+    const tableHeader = `| Dag       | Datum       | Beschikbaarheid |`;
+    const divider = `+-----------+-------------+------------------+`;
 
     const rows = weekData.map((item) => {
       const day = (days[item.dagVanDeWeek - 1] || "").padEnd(9);
-      const date = weekDates[item.dagVanDeWeek - 1].padEnd(11);
-      const dienst = (item.dienst || "Geen").padEnd(8);
-      const opmerking = (item.opmerkingen || "Geen").padEnd(10);
+      const date = (weekDates[item.dagVanDeWeek - 1] || "Onbekend").padEnd(11);
       const beschikbaarheid = (item.locoflex || "Geen").padEnd(16);
-      return `| ${day} | ${date} | ${dienst} | ${opmerking} | ${beschikbaarheid} |`;
+      return `| ${day} | ${date} | ${beschikbaarheid} |`;
     });
 
     const content = [header, divider, tableHeader, divider, ...rows, divider].join("\n");
