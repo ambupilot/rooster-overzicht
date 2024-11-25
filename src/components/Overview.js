@@ -1,24 +1,67 @@
 import React from "react";
+import dayjs from "dayjs";
+import weekOfYear from "dayjs/plugin/weekOfYear";
 
-const Overview = ({ data }) => {
+dayjs.extend(weekOfYear); // Activeer weeknummers
+
+const Overview = ({ data, week }) => {
   const generateOverview = () => {
-    const header = "| Dag       | Datum       | Beschikbaarheid |";
-    const divider = "+-----------+-------------+------------------+";
-    const days = ["Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"];
-    const rows = data.map(
-      (item) =>
-        `| ${days[item.dagVanDeWeek - 1].padEnd(9)} | ${item.datum.padEnd(11)} | ${item.locoflex.padEnd(16)} |`
-    );
+    try {
+      // Bereken datums van de week
+      const baseDate = dayjs().week(week).startOf("week");
+      const weekDates = Array.from({ length: 7 }).map((_, index) =>
+        baseDate.add(index, "day").format("DD-MM-YYYY")
+      );
 
-    const content = [divider, header, divider, ...rows, divider].join("\n");
+      //console.log("Weekdatums:", weekDates);
 
-    const blob = new Blob([content], { type: "text/plain" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "Overzicht.txt";
-    a.click();
-    URL.revokeObjectURL(url);
+      // Bouw de header met de kalenderweek en datums
+      const header = `
+      ============================================
+                     Kalenderweek ${week}
+      ============================================
+        Datums: ${weekDates[0]} - ${weekDates[6]}
+      ============================================
+      `;
+
+      // Bouw de tabel
+      const tableHeader = `| Dag       | Datum       | Beschikbaarheid |`;
+      const divider = `+-----------+-------------+------------------+`;
+
+      const days = ["Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"];
+
+      // Voeg de juiste datums toe aan elke dag in data
+      const rows = data.map((item) => {
+        const dag = (days[item.dagVanDeWeek - 1] || "").padEnd(9);
+        const datum = weekDates[item.dagVanDeWeek - 1]; // Match de datum met dag
+        const beschikbaarheid = (item.locoflex || "Geen").padEnd(16);
+        return `| ${dag} | ${datum.padEnd(11)} | ${beschikbaarheid} |`;
+      });
+
+      //console.log("Tabelrijen:", rows);
+
+      // Combineer alle onderdelen
+      const content = [header, divider, tableHeader, divider, ...rows, divider].join("\n");
+
+      //console.log("Overzichtsinhoud:", content);
+
+      // Maak een Blob van de inhoud
+      const blob = new Blob([content], { type: "text/plain" });
+
+      // Genereer een downloadbare link
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `Beschikbaarheid-week-${week}.txt`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+
+      // Vrijgeven van de gegenereerde URL
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error("Fout bij genereren overzicht:", error);
+    }
   };
 
   return (

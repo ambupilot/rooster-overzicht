@@ -24,5 +24,5 @@ export const saveData = async (updatedData) => {
 };
 fetch("http://localhost:3001/data")
   .then((res) => res.json())
-  .then((data) => console.log(data))
+  //.then((data) => console.log(data))
   .catch((err) => console.error("Fout:", err));

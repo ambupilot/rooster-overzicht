@@ -91,12 +91,13 @@ const App = () => {
         </div>
       </div>
 
-      <Overview data={weekData} />
+      <Overview data={weekData} week={week} />
+
 
       {notification.message && (
         <div
           className={`p-4 mt-4 text-white rounded ${
-            notification.type === "success" ? "bg-green-300" : "bg-red-300"
+            notification.type === "success" ? "bg-green-500" : "bg-red-500"
           }`}
         >
           {notification.message}

@@ -41,5 +41,5 @@ app.post("/data", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server draait op http://localhost:${PORT}`);
+  //console.log(`Server draait op http://localhost:${PORT}`);
 });
