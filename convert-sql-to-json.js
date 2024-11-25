@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-
+ 
 // Pad naar de SQL-dump
 const sqlFilePath = path.join(__dirname, "dump.sql"); // Vervang met jouw dumpbestand
 const outputFilePath = path.join(__dirname, "store-data.json"); // Waar de JSON moet worden opgeslagen
