@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Table from "./components/Table";
-import Overview from "./components/Overview";
 import { getData, saveData } from "./store";
 
 const App = () => {
   const [data, setData] = useState([]);
-  const [week, setWeek] = useState(51);
+  const [week, setWeek] = useState(51); // Start met kalenderweek 51
   const [isEditable, setIsEditable] = useState(false);
   const [notification, setNotification] = useState({ message: "", type: "" });
 
@@ -67,6 +66,7 @@ const App = () => {
 
       <Table
         data={weekData}
+        week={week}
         handleChange={handleChange}
         isEditable={isEditable}
       />
@@ -90,9 +90,6 @@ const App = () => {
           </select>
         </div>
       </div>
-
-      <Overview data={weekData} week={week} />
-
 
       {notification.message && (
         <div
