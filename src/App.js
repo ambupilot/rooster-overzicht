@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Table from "./components/Table";
-import { getData, saveData } from "./store";
-import dayjs from "dayjs";
-import isoWeek from "dayjs/plugin/isoWeek";
 
-dayjs.extend(isoWeek); // Gebruik ISO-weken
+const API_BASE_URL = "/.netlify/functions/server";
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -12,15 +9,18 @@ const App = () => {
   const [isEditable, setIsEditable] = useState(false);
   const [notification, setNotification] = useState({ message: "", type: "" });
 
+  // Ophalen van gegevens bij het laden van de app
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const serverData = await getData();
-        setData(serverData);
-      } catch (err) {
-        console.error("Fout bij ophalen van data:", err);
+        const response = await fetch(`${API_BASE_URL}`);
+        const result = await response.json();
+        setData(result);
+      } catch (error) {
+        console.error("Fout bij ophalen van data:", error);
       }
     };
+
     fetchData();
   }, []);
 
@@ -39,8 +39,18 @@ const App = () => {
 
   const handleSave = async () => {
     try {
-      await saveData(data);
-      setNotification({ message: "Gegevens succesvol opgeslagen!", type: "success" });
+      const response = await fetch(`${API_BASE_URL}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setNotification({ message: "Gegevens succesvol opgeslagen!", type: "success" });
+      } else {
+        setNotification({ message: "Opslaan mislukt.", type: "error" });
+      }
     } catch (err) {
       console.error("Fout bij opslaan van data:", err);
       setNotification({ message: "Opslaan mislukt.", type: "error" });
@@ -60,23 +70,21 @@ const App = () => {
     );
 
     const header = `
-  ============================================
-  Beschikbaarheid M. Kerssing
-  Kalenderweek: ${week}
-  ============================================
+    ============================================
+                     Kalenderweek: ${week}
+    ============================================
     `;
 
-    const tableHeader = `  | Dag       | Datum       | Beschikbaarheid  |`;
-    const divider = `  +-----------+-------------+------------------+`;
+    const tableHeader = `| Dag       | Datum       | Dienst  | Opmerking  | Beschikbaarheid |`;
+    const divider = `+-----------+-------------+---------+------------+------------------+`;
 
     const rows = weekData.map((item) => {
       const day = (days[item.dagVanDeWeek - 1] || "").padEnd(9);
       const date = weekDates[item.dagVanDeWeek - 1].padEnd(11);
-      //const dienst = (item.dienst || "Geen").padEnd(8);
-      //const opmerking = (item.opmerkingen || "Geen").padEnd(10);
+      const dienst = (item.dienst || "Geen").padEnd(8);
+      const opmerking = (item.opmerkingen || "Geen").padEnd(10);
       const beschikbaarheid = (item.locoflex || "Geen").padEnd(16);
-      //return `| ${day} | ${date} | ${dienst} | ${opmerking} | ${beschikbaarheid} |`;
-      return `  | ${day} | ${date} | ${beschikbaarheid} |`;
+      return `| ${day} | ${date} | ${dienst} | ${opmerking} | ${beschikbaarheid} |`;
     });
 
     const content = [header, divider, tableHeader, divider, ...rows, divider].join("\n");
