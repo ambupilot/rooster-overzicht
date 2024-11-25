@@ -1,0 +1,758 @@
+[
+  {
+    "id": 1,
+    "dagVanDeWeek": 1,
+    "startKalenderWeek": 51,
+    "roosterWeek": 3,
+    "dienst": "RES",
+    "opmerkingen": "na 17",
+    "locoflex": "tot 17"
+  },
+  {
+    "id": 2,
+    "dagVanDeWeek": 2,
+    "startKalenderWeek": 51,
+    "roosterWeek": 3,
+    "dienst": "--",
+    "opmerkingen": "",
+    "locoflex": "hele dag"
+  },
+  {
+    "id": 3,
+    "dagVanDeWeek": 3,
+    "startKalenderWeek": 51,
+    "roosterWeek": 3,
+    "dienst": "--",
+    "opmerkingen": "",
+    "locoflex": "hele dag"
+  },
+  {
+    "id": 4,
+    "dagVanDeWeek": 4,
+    "startKalenderWeek": 51,
+    "roosterWeek": 3,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": "tot 17"
+  },
+  {
+    "id": 5,
+    "dagVanDeWeek": 5,
+    "startKalenderWeek": 51,
+    "roosterWeek": 3,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": "tot 17"
+  },
+  {
+    "id": 6,
+    "dagVanDeWeek": 6,
+    "startKalenderWeek": 51,
+    "roosterWeek": 3,
+    "dienst": "R",
+    "opmerkingen": "",
+    "locoflex": "--"
+  },
+  {
+    "id": 7,
+    "dagVanDeWeek": 7,
+    "startKalenderWeek": 51,
+    "roosterWeek": 3,
+    "dienst": "R",
+    "opmerkingen": "",
+    "locoflex": "--"
+  },
+  {
+    "id": 8,
+    "dagVanDeWeek": 1,
+    "startKalenderWeek": 52,
+    "roosterWeek": 4,
+    "dienst": "--",
+    "opmerkingen": "1-52-4",
+    "locoflex": ""
+  },
+  {
+    "id": 9,
+    "dagVanDeWeek": 2,
+    "startKalenderWeek": 52,
+    "roosterWeek": 4,
+    "dienst": "RES",
+    "opmerkingen": "sdsd",
+    "locoflex": ""
+  },
+  {
+    "id": 10,
+    "dagVanDeWeek": 3,
+    "startKalenderWeek": 52,
+    "roosterWeek": 4,
+    "dienst": "R ",
+    "opmerkingen": "Martijn",
+    "locoflex": ""
+  },
+  {
+    "id": 11,
+    "dagVanDeWeek": 4,
+    "startKalenderWeek": 52,
+    "roosterWeek": 4,
+    "dienst": "R",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 12,
+    "dagVanDeWeek": 5,
+    "startKalenderWeek": 52,
+    "roosterWeek": 4,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 13,
+    "dagVanDeWeek": 6,
+    "startKalenderWeek": 52,
+    "roosterWeek": 4,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 14,
+    "dagVanDeWeek": 7,
+    "startKalenderWeek": 52,
+    "roosterWeek": 4,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 15,
+    "dagVanDeWeek": 1,
+    "startKalenderWeek": 1,
+    "roosterWeek": 5,
+    "dienst": "--",
+    "opmerkingen": "1-1-5",
+    "locoflex": ""
+  },
+  {
+    "id": 16,
+    "dagVanDeWeek": 2,
+    "startKalenderWeek": 1,
+    "roosterWeek": 5,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 17,
+    "dagVanDeWeek": 3,
+    "startKalenderWeek": 1,
+    "roosterWeek": 5,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 18,
+    "dagVanDeWeek": 4,
+    "startKalenderWeek": 1,
+    "roosterWeek": 5,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 19,
+    "dagVanDeWeek": 5,
+    "startKalenderWeek": 1,
+    "roosterWeek": 5,
+    "dienst": "--",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 20,
+    "dagVanDeWeek": 6,
+    "startKalenderWeek": 1,
+    "roosterWeek": 5,
+    "dienst": "R ",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 21,
+    "dagVanDeWeek": 7,
+    "startKalenderWeek": 1,
+    "roosterWeek": 5,
+    "dienst": "R ",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 22,
+    "dagVanDeWeek": 1,
+    "startKalenderWeek": 2,
+    "roosterWeek": 6,
+    "dienst": "R",
+    "opmerkingen": "1-2-6",
+    "locoflex": ""
+  },
+  {
+    "id": 23,
+    "dagVanDeWeek": 2,
+    "startKalenderWeek": 2,
+    "roosterWeek": 6,
+    "dienst": "--",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 24,
+    "dagVanDeWeek": 3,
+    "startKalenderWeek": 2,
+    "roosterWeek": 6,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 25,
+    "dagVanDeWeek": 4,
+    "startKalenderWeek": 2,
+    "roosterWeek": 6,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 26,
+    "dagVanDeWeek": 5,
+    "startKalenderWeek": 2,
+    "roosterWeek": 6,
+    "dienst": "R",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 27,
+    "dagVanDeWeek": 6,
+    "startKalenderWeek": 2,
+    "roosterWeek": 6,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 28,
+    "dagVanDeWeek": 7,
+    "startKalenderWeek": 2,
+    "roosterWeek": 6,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 29,
+    "dagVanDeWeek": 1,
+    "startKalenderWeek": 3,
+    "roosterWeek": 7,
+    "dienst": "RES",
+    "opmerkingen": "1-3-7",
+    "locoflex": ""
+  },
+  {
+    "id": 30,
+    "dagVanDeWeek": 2,
+    "startKalenderWeek": 3,
+    "roosterWeek": 7,
+    "dienst": "--",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 31,
+    "dagVanDeWeek": 3,
+    "startKalenderWeek": 3,
+    "roosterWeek": 7,
+    "dienst": "--",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 32,
+    "dagVanDeWeek": 4,
+    "startKalenderWeek": 3,
+    "roosterWeek": 7,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 33,
+    "dagVanDeWeek": 5,
+    "startKalenderWeek": 3,
+    "roosterWeek": 7,
+    "dienst": "CO",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 34,
+    "dagVanDeWeek": 6,
+    "startKalenderWeek": 3,
+    "roosterWeek": 7,
+    "dienst": "R",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 35,
+    "dagVanDeWeek": 7,
+    "startKalenderWeek": 3,
+    "roosterWeek": 7,
+    "dienst": "R",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 36,
+    "dagVanDeWeek": 1,
+    "startKalenderWeek": 4,
+    "roosterWeek": 8,
+    "dienst": "RES",
+    "opmerkingen": "1-4-8",
+    "locoflex": ""
+  },
+  {
+    "id": 37,
+    "dagVanDeWeek": 2,
+    "startKalenderWeek": 4,
+    "roosterWeek": 8,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 38,
+    "dagVanDeWeek": 3,
+    "startKalenderWeek": 4,
+    "roosterWeek": 8,
+    "dienst": "R",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 39,
+    "dagVanDeWeek": 4,
+    "startKalenderWeek": 4,
+    "roosterWeek": 8,
+    "dienst": "--",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 40,
+    "dagVanDeWeek": 5,
+    "startKalenderWeek": 4,
+    "roosterWeek": 8,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 41,
+    "dagVanDeWeek": 6,
+    "startKalenderWeek": 4,
+    "roosterWeek": 8,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 42,
+    "dagVanDeWeek": 7,
+    "startKalenderWeek": 4,
+    "roosterWeek": 8,
+    "dienst": "R",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 43,
+    "dagVanDeWeek": 1,
+    "startKalenderWeek": 5,
+    "roosterWeek": 9,
+    "dienst": "--",
+    "opmerkingen": "1-5-9",
+    "locoflex": ""
+  },
+  {
+    "id": 44,
+    "dagVanDeWeek": 2,
+    "startKalenderWeek": 5,
+    "roosterWeek": 9,
+    "dienst": "--",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 45,
+    "dagVanDeWeek": 3,
+    "startKalenderWeek": 5,
+    "roosterWeek": 9,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 46,
+    "dagVanDeWeek": 4,
+    "startKalenderWeek": 5,
+    "roosterWeek": 9,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 47,
+    "dagVanDeWeek": 5,
+    "startKalenderWeek": 5,
+    "roosterWeek": 9,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 48,
+    "dagVanDeWeek": 6,
+    "startKalenderWeek": 5,
+    "roosterWeek": 9,
+    "dienst": "R",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 49,
+    "dagVanDeWeek": 7,
+    "startKalenderWeek": 5,
+    "roosterWeek": 9,
+    "dienst": "R",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 50,
+    "dagVanDeWeek": 1,
+    "startKalenderWeek": 6,
+    "roosterWeek": 10,
+    "dienst": "RES",
+    "opmerkingen": "1-6-10",
+    "locoflex": ""
+  },
+  {
+    "id": 51,
+    "dagVanDeWeek": 2,
+    "startKalenderWeek": 6,
+    "roosterWeek": 10,
+    "dienst": "R",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 52,
+    "dagVanDeWeek": 3,
+    "startKalenderWeek": 6,
+    "roosterWeek": 10,
+    "dienst": "R",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 53,
+    "dagVanDeWeek": 4,
+    "startKalenderWeek": 6,
+    "roosterWeek": 10,
+    "dienst": "--",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 54,
+    "dagVanDeWeek": 5,
+    "startKalenderWeek": 6,
+    "roosterWeek": 10,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 55,
+    "dagVanDeWeek": 6,
+    "startKalenderWeek": 6,
+    "roosterWeek": 10,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 56,
+    "dagVanDeWeek": 7,
+    "startKalenderWeek": 6,
+    "roosterWeek": 10,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 57,
+    "dagVanDeWeek": 1,
+    "startKalenderWeek": 7,
+    "roosterWeek": 11,
+    "dienst": "--",
+    "opmerkingen": "1-7-11",
+    "locoflex": ""
+  },
+  {
+    "id": 58,
+    "dagVanDeWeek": 2,
+    "startKalenderWeek": 7,
+    "roosterWeek": 11,
+    "dienst": "--",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 59,
+    "dagVanDeWeek": 3,
+    "startKalenderWeek": 7,
+    "roosterWeek": 11,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 60,
+    "dagVanDeWeek": 4,
+    "startKalenderWeek": 7,
+    "roosterWeek": 11,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 61,
+    "dagVanDeWeek": 5,
+    "startKalenderWeek": 7,
+    "roosterWeek": 11,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 62,
+    "dagVanDeWeek": 6,
+    "startKalenderWeek": 7,
+    "roosterWeek": 11,
+    "dienst": "R",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 63,
+    "dagVanDeWeek": 7,
+    "startKalenderWeek": 7,
+    "roosterWeek": 11,
+    "dienst": "R",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 64,
+    "dagVanDeWeek": 1,
+    "startKalenderWeek": 8,
+    "roosterWeek": 12,
+    "dienst": "RES",
+    "opmerkingen": "1-8-12",
+    "locoflex": ""
+  },
+  {
+    "id": 65,
+    "dagVanDeWeek": 2,
+    "startKalenderWeek": 8,
+    "roosterWeek": 12,
+    "dienst": "R",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 66,
+    "dagVanDeWeek": 3,
+    "startKalenderWeek": 8,
+    "roosterWeek": 12,
+    "dienst": "R",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 67,
+    "dagVanDeWeek": 4,
+    "startKalenderWeek": 8,
+    "roosterWeek": 12,
+    "dienst": "--",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 68,
+    "dagVanDeWeek": 5,
+    "startKalenderWeek": 8,
+    "roosterWeek": 12,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 69,
+    "dagVanDeWeek": 6,
+    "startKalenderWeek": 8,
+    "roosterWeek": 12,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 70,
+    "dagVanDeWeek": 7,
+    "startKalenderWeek": 8,
+    "roosterWeek": 12,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 71,
+    "dagVanDeWeek": 1,
+    "startKalenderWeek": 9,
+    "roosterWeek": 1,
+    "dienst": "--",
+    "opmerkingen": "1-9-1",
+    "locoflex": ""
+  },
+  {
+    "id": 72,
+    "dagVanDeWeek": 2,
+    "startKalenderWeek": 9,
+    "roosterWeek": 1,
+    "dienst": "--",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 73,
+    "dagVanDeWeek": 3,
+    "startKalenderWeek": 9,
+    "roosterWeek": 1,
+    "dienst": "CO",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 74,
+    "dagVanDeWeek": 4,
+    "startKalenderWeek": 9,
+    "roosterWeek": 1,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 75,
+    "dagVanDeWeek": 5,
+    "startKalenderWeek": 9,
+    "roosterWeek": 1,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 76,
+    "dagVanDeWeek": 6,
+    "startKalenderWeek": 9,
+    "roosterWeek": 1,
+    "dienst": "R",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 77,
+    "dagVanDeWeek": 7,
+    "startKalenderWeek": 9,
+    "roosterWeek": 1,
+    "dienst": "R",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 78,
+    "dagVanDeWeek": 1,
+    "startKalenderWeek": 10,
+    "roosterWeek": 2,
+    "dienst": "RES",
+    "opmerkingen": "1-10-2",
+    "locoflex": ""
+  },
+  {
+    "id": 79,
+    "dagVanDeWeek": 2,
+    "startKalenderWeek": 10,
+    "roosterWeek": 2,
+    "dienst": "R",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 80,
+    "dagVanDeWeek": 3,
+    "startKalenderWeek": 10,
+    "roosterWeek": 2,
+    "dienst": "--",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 81,
+    "dagVanDeWeek": 4,
+    "startKalenderWeek": 10,
+    "roosterWeek": 2,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 82,
+    "dagVanDeWeek": 5,
+    "startKalenderWeek": 10,
+    "roosterWeek": 2,
+    "dienst": "R",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 83,
+    "dagVanDeWeek": 6,
+    "startKalenderWeek": 10,
+    "roosterWeek": 2,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  },
+  {
+    "id": 84,
+    "dagVanDeWeek": 7,
+    "startKalenderWeek": 10,
+    "roosterWeek": 2,
+    "dienst": "RES",
+    "opmerkingen": "",
+    "locoflex": ""
+  }
+]
