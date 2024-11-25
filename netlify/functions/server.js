@@ -1,20 +1,19 @@
 const { readFileSync, writeFileSync } = require("fs");
 const path = require("path");
 
-//const dataFilePath = path.join(process.cwd(), "../../store-data.json");
 const dataFilePath = path.resolve(__dirname, "../../store-data.json");
 
 exports.handler = async (event) => {
   try {
     if (event.httpMethod === "GET") {
-      // Data ophalen
+      // Haal data op uit JSON-bestand
       const data = readFileSync(dataFilePath, "utf-8");
       return {
         statusCode: 200,
         body: data,
       };
     } else if (event.httpMethod === "POST") {
-      // Data opslaan
+      // Sla data op in JSON-bestand
       const newData = JSON.parse(event.body);
       writeFileSync(dataFilePath, JSON.stringify(newData, null, 2));
       return {
@@ -28,7 +27,7 @@ exports.handler = async (event) => {
       };
     }
   } catch (error) {
-    console.error("Server error:", error);
+    console.error("Fout in serverless function:", error);
     return {
       statusCode: 500,
       body: JSON.stringify({ message: "Internal server error" }),
